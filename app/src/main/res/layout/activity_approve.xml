@@ -1,16 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/gg_background">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="144dp"
-        android:layout_height="90dp"
-        android:text="Approve Activity"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+
+        <TextView
+            android:text="Permit To Borrow Request \nAPPROVED "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="Date:"/>
+        <EditText android:id="@+id/etDate" android:hint="MM/DD/YYYY"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Department:"/>
+        <EditText android:id="@+id/etDepartment" android:hint="e.g. CCIS"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Name of Requesting:"/>
+        <EditText android:id="@+id/etRequester" android:hint="e.g. Irish Rocha"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Name of Project:"/>
+        <EditText android:id="@+id/etProject" android:hint="e.g. Umak Jam"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Date and Time of Project:"/>
+        <EditText android:id="@+id/etDateTime" android:hint="MM/DD/YYYY"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Venue:"/>
+        <EditText android:id="@+id/etVenue" android:hint="e.g. Umak Oval"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <!-- Table Section -->
+        <TextView android:text="Items:" android:textStyle="bold" android:paddingTop="16dp"/>
+        <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <TextView android:text="Qty" android:textStyle="bold"/>
+                <TextView android:text="Description" android:textStyle="bold"/>
+                <TextView android:text="Date of Transfer" android:textStyle="bold"/>
+                <TextView android:text="From" android:textStyle="bold"/>
+                <TextView android:text="To" android:textStyle="bold"/>
+                <TextView android:text="Date of Return" android:textStyle="bold"/>
+                <TextView android:text="Remarks" android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText android:id="@+id/etQty" android:hint="2"/>
+                <EditText android:id="@+id/etDesc" android:hint="Farlight"/>
+                <EditText android:id="@+id/etTransfer" android:hint="05/13/2025"/>
+                <EditText android:id="@+id/etFrom" android:hint=""/>
+                <EditText android:id="@+id/etTo" android:hint=""/>
+                <EditText android:id="@+id/etReturn" android:hint="05/15/2025"/>
+                <EditText android:id="@+id/etRemarks" android:hint=""/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:text="APPROVED BY:"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/etApprover"
+            android:hint="e.g. EFREN KIM MENDOZA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>
